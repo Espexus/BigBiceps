@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuarios</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <form id="formularioRegistro" class="formulario" action="" method="POST">
+        <h1>Registro de usuarios</h1>
+        <div class="caja-formulario">
+            <label for="alias">Escribe un alias de usuario</label>
+            <input type="text" placeholder="Juan Pérez" id="alias" name="alias">
+    
+            <label for="clave">Guarda una contraseña</label>
+            <input type="password" placeholder="********" id="clave" name="clave">
+        </div>
+        
+        <div class="caja-formulario">
+            <label for="edad">¿Qué edad tienes?</label>
+            <input type="number" name="edad" id="edad" placeholder="18">
+
+            <label for="nacionalidad">¿De dónde eres?</label>
+            <select name="nacionalidad" id="nacionalidad">
+                <option value="0">Argentina</option>
+                <option value="1">Perú</option>
+                <option value="2">Colombia</option>
+                <option value="3">México</option>
+                <option value="4">Venezuela</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Registrar">
+    </form>
+    
+
+    <script src=""></script>
+</body>
+</html>
