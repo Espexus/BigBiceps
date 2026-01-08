@@ -31,11 +31,45 @@
     }
 
     async function registrar (alias, clave, edad, nacionalidad, bandera) {
+        if (!await disponibilidad(alias)) {
+            alert("alias no disponible, elige otro")
+            return
+        }
         let resultado;
         try {
-            const res = await fetch ()
+            const res = await fetch ("http://localhost:3000/api/registroUsuario", {
+                method: "POST",
+                headers: {"Content-Type" : "application/json"},
+                body: JSON.stringify({alias, clave, edad, nacionalidad, bandera})
+            })
+
+            if (!res.ok) {
+                throw new Error ("error al insertar los datos"); 
+            }
+            resultado = await res.json()
         } catch (err) {
-            
+            console.error("fallo algo ", err)
+        }
+
+        alert(resultado.message);
+    }
+
+    async function disponibilidad (alias) {
+        let resultado;
+        try {
+            const res = await fetch (`http://localhost:3000/api/disponibilidad/${alias}`)
+            if(!res.ok) {
+                throw new Error ("error al consultar");
+            }
+            resultado = await res.json();
+
+            if (resultado.total >= 1) {
+                return false;
+            }
+            return true;
+
+        } catch (err) {
+            console.error("fallo algo ", err)
         }
     }
 

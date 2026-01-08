@@ -60,11 +60,9 @@
     app.post("/api/registroUsuario", (req, res) => {
         const {alias, clave, edad, nacionalidad, bandera} = req.body
 
-        if(!alias || !clave || !edad || !nacionalidad || !bandera) {
+        if(!alias || !clave || isNaN(edad) || !nacionalidad || !bandera) {
             return res.status(400).json({message: "datos inválidos"})
-        } else if (isNaN(edad)){
-            return res.status(400).json({message: "tu edad no tiene un valor válido"})
-        }
+        } 
 
         db.query("CALL registro_usuario (?, ?, ?, ?, ?)", [alias, clave, edad, nacionalidad, bandera], (err, resultado) => {
             if (err) {
