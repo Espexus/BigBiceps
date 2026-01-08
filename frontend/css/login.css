@@ -58,4 +58,14 @@ select {
     font-size: 1em;
 }
 
+/* enlace nuevo */
+.enlace-cuentas {
+    color: rgb(255, 61, 61);
+    font-size: 0.9em;
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin: 2% 0;
+}
+
 /* parte responsive */
