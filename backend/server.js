@@ -35,7 +35,7 @@
         db.query("CALL login (?, ?)", [alias, clave], (err, resultado) => {
             if (err) {
                 return res.status(500).json({message: "error en la consulta a la base de datos"});
-            } else if (resultado[0].length() < 1) {
+            } else if (resultado[0].length < 1) {
                 return res.status(401).json({message: "datos de acceso inválidos"})
             }
             return res.json(resultado[0])
