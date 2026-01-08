@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 16px;
+}
+
+/* cajas principales */
+.caja-contenido {
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formulario {
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 2%;
+}
+
+/* texto y contenido */
+h1 {
+    font-size: 2.2m;
+    text-transform: uppercase;
+    margin-bottom: 2.5%;
+}
+label, input {
+    display: block;
+}
+label {
+    font-size: 1.25em;
+    padding: 1% 0;
+    font-family: monospace;
+}
+input[type ="text"], input[type="password"], .campo-input {
+    margin-bottom: 3%;
+    height: 30px;
+    width: 90%;
+    font-size: 1em;
+    color: rgb(45, 45, 45);
+}
+input[type="password"] {
+    font-size: 1.4em;
+}
+.boton {
+    padding: 1% 2%;
+    margin-top: 4%;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* estilo para el select del registro */
+select {
+    padding: 2% 4%;
+    font-size: 1em;
+}
+
+/* parte responsive */
