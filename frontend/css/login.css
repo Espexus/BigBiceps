@@ -8,7 +8,7 @@ html {
 
 /* cajas principales */
 .caja-contenido {
-    width: 100wh;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
