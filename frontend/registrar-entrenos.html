@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de entrenamientos</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/registro-entrenos.css">
     <link rel="shortcut icon" href="imgs/icono.jpg" type="image/x-icon">
 </head>
 <body>
-    <form action="" method="POST" id="formulario-registro-entreno">
-        <div class="parte-form">
-            <label for="grupo">Grupo muscular de tu entrenamiento</label>
-            <select name="grupo" id="grupo">
-                <option value="0">Brazos</option>
-                <option value="1">Pecho o espalda</option>
-                <option value="2">Abdomen</option>
-                <option value="3">Piernas o gluteos</option>
-                <option value="4">Cardiovascular</option>
-                <option value="5">Deportivo</option>
-            </select>
-        </div>
-        <div class="parte-form">
-            <label for="descripcion"></label>
-            <input type="text" name="descripcion" id="descripcion" placeholder="Describe el entrenamiento que realizaste">
-        </div>
-        <div class="parte-form">
-            <input type="submit" value="Guardar" class="boton">
-        </div>
-
-
-    </form>
+    <div class="caja">
+        <form action="" method="POST" id="formulario-registro-entreno">
+            <h1 class="titulo">Registro de entrenamiento</h1>
+            <div class="parte-form">
+                <label for="grupo">Grupo muscular de tu entrenamiento</label>
+                <select name="grupo" id="grupo">
+                    <option value="0">Brazos</option>
+                    <option value="1">Pecho o espalda</option>
+                    <option value="2">Abdomen</option>
+                    <option value="3">Piernas o gluteos</option>
+                    <option value="4">Cardiovascular</option>
+                    <option value="5">Deportivo</option>
+                </select>
+            </div>
+            <div class="parte-form">
+                <label for="descripcion"></label>
+                <textarea name="descripcion" id="descripcion" placeholder="Describe el entrenamiento que realizaste"></textarea>
+            </div>
+            <div class="parte-form">
+                <input type="submit" value="Guardar" class="boton">
+            </div>
+    
+    
+        </form>
+    </div>
     
     <script src=""></script>
 </body>
