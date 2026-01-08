@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+
+/* cajas */
+.caja {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    padding: 2%;
+    box-shadow: 1px 4px 4px rgb(74, 74, 74);
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+}
+.parte-form {
+    width: 100%;
+    margin: 4% 0;
+}
+
+/* contenido */
+.titulo {
+    font-size: 1.4em;
+    font-family: monospace;
+    text-align: center;
+}
+textarea {
+    height: 160px;
+    width: 98%;
+    resize: none;
+    padding: 2%;
+}
+label, select {
+    display: block;
+}
+label {
+    padding: 2%;
+}
+select {
+    padding: 2%;
+    width: 80%;
+}
+.boton {
+    padding: 1%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 6%;
+}
