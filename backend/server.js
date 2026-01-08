@@ -84,13 +84,13 @@
     })
 
     app.get("/api/entrenamientos/usuario/:idusuario", (req, res) => {
-        const {id} = req.params
+        const {idusuario} = req.params
 
-        if(!id || isNaN(id)) {
-            return res.status(400).json({message: "ingresa un alias válido"})
+        if(!idusuario || isNaN(idusuario)) {
+            return res.status(400).json({message: "ingresa un id válido"})
         }
 
-        db.query("CALL consultar_entrenamientos_usuario (?)", [id], (err, resultado) => {
+        db.query("CALL consultar_entrenamientos_usuario (?)", [idusuario], (err, resultado) => {
             if (err) {
                 return res.status(500).json({message: "error en la consulta a la base de datos"});
             } 
