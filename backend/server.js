@@ -1,4 +1,3 @@
-(function () {
     const express = require("express");
     const cors = require("cors");
     const db = require("./bd");
@@ -7,7 +6,7 @@
     app.use(cors());
     app.use(express.json());
 
-    // consultar datos de los usuarios
+    // consultar y actualizar datos de los usuarios
 
     app.get("/api/datosUser/:idusuario", (req, res) => {
         const {idusuario} = req.params;
@@ -20,7 +19,22 @@
             if (err) {
                 return res.status(500).json({message: "error en la consulta a la base de datos"});
             } 
-            return res.json(resultado[0])
+            return res.json(resultado[0][0])
+        })
+    })
+
+    app.put("/api/datosUser/update/", (req, res) => {
+        const {idusuario, alias, edad, nacionalidad, clave, bandera} = req.body;
+
+        if (!idusuario || isNaN(idusuario)) {
+            return res.status(400).json({message: "datos inválidos"})
+        }
+                
+        db.query("CALL actualizar (?, ?, ?, ?, ?, ?)", [idusuario, alias, edad, nacionalidad, clave, bandera], (err, resultado) => {
+            if (err) {
+                return res.status(500).json({message: "error en la consulta a la base de datos", err});
+            } 
+            return res.json({message: "actualizado correctamente"})
         })
     })
 
@@ -84,13 +98,13 @@
     })
 
     app.get("/api/entrenamientos/usuario/:idusuario", (req, res) => {
-        const {id} = req.params
+        const {idusuario} = req.params
 
-        if(!id || isNaN(id)) {
-            return res.status(400).json({message: "ingresa un alias válido"})
+        if(!idusuario || isNaN(idusuario)) {
+            return res.status(400).json({message: "ingresa un id válido"})
         }
 
-        db.query("CALL consultar_entrenamientos_usuario (?)", [id], (err, resultado) => {
+        db.query("CALL consultar_entrenamientos_usuario (?)", [idusuario], (err, resultado) => {
             if (err) {
                 return res.status(500).json({message: "error en la consulta a la base de datos"});
             } 
@@ -121,6 +135,3 @@
     app.listen(3000, () => {
         console.log("servidor corriendo en el puerto 3000 http://localhost:3000")
     })
-
-
-})()

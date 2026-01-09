@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi perfil</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="shortcut icon" href="imgs/icono.jpg" type="image/x-icon">
 </head>
 <body>
@@ -13,30 +13,27 @@
     <div class="información">
         <div class="item-informacion">
             <h3>Alias</h3>
-            <hr>
             <p class="dato" id="alias-espacio"></p>
         </div>
+        <hr>
+
 
         <div class="item-informacion">
             <h3>Edad</h3>
-            <hr>
             <p class="dato" id="edad-espacio"></p>
         </div>
+        <hr>
 
         <div class="item-informacion">
             <h3>Nacionalidad</h3>
-            <hr>
-            <p class="dato" id="nacionalidad"></p>
+            <p class="dato" id="nacionalidad-espacio"></p>
+            <img src="" title="" class="icono-bandera" id="bandera-espacio">
         </div>
+        <hr>
 
-        <div class="item-informacion">
-            <h3>Bandera</h3>
-            <hr>
-            <p class="dato" id="bandera"></p>
-        </div>
     </div>
 
-    <button class="boton-discreto">
+    <button id="actualizacion" class="boton-discreto">
         Modificar datos
     </button>
 
@@ -50,20 +47,21 @@
 
         <label for="nacionalidad">Actualiza tu nacionalidad</label>
         <select name="nacionalidad" id="nacionalidad">
-            <select name="nacionalidad" id="nacionalidad">
-                <option value="0">Argentina</option>
-                <option value="1">Perú</option>
-                <option value="2">Colombia</option>
-                <option value="3">México</option>
-                <option value="4">Venezuela</option>
-            </select>
+            <option value="0">Argentina</option>
+            <option value="1">Perú</option>
+            <option value="2">Colombia</option>
+            <option value="3">México</option>
+            <option value="4">Venezuela</option>
         </select>
+
+        <label for="clave">Actualiza tu contraseña</label>
+        <input type="password" name="clave" id="clave">
 
         <input type="submit" class="boton" value="Actualizar">
         
     </form>
     
     <script src="js/sesion.js"></script>
-    <script src=""></script>
+    <script src="js/perfil.js"></script>
 </body>
 </html>
