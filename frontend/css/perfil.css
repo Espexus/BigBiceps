@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 16px;
+}
+
+.imagen-perfil {
+    display: block;
+    border-radius: 50%;
+    width: 18%;
+    margin: 2% auto;
+}
+
+/* informacion */
+.informacion {
+    width: 100%;
+    padding: 1% 4%;
+    box-sizing: border-box;
+}
+.item-informacion {
+    width: 100%;
+    padding: 2% 1%;
+}
+h3 {
+    font-size: 2em;
+}
+.dato {
+    font-size: 1.2em;
+    font-family: cursive;
+    color: rgb(115, 115, 115);
+}
+.nacionalidad-caja {
+    display: flex;
+    gap: 1%;
+    align-items: center;
+}
+.icono-bandera {
+    width: 3%;
+}
+
+/* boton */
+.boton-discreto {
+    margin: 2% 4%;
+    padding: 0.5%;
+}
+/* clase oculto */
+.oculto {
+    display: none;
+}
+
+/* clases de los formularios */
+.formulario {
+    padding: 2%;
+    padding-left: 4%;
+    color: white;
+    background-color: black;
+}
+label, input, select {
+    display: block;
+}
+label {
+    font-size: 1.2em;
+    padding: 1% 0;
+}
+input[type="text"], input[type="number"], input[type="password"] {
+    width: 50%;
+    padding: 0.5%;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    margin-top: 2%;
+    padding: 0.5%;
+}
+select {
+    padding: 0.5em;
+    width: 20%;
+}
+input:hover, select:hover {
+    color: red;
+}

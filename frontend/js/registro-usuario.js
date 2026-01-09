@@ -8,7 +8,7 @@
     })
 
     const nacionalidades = ["Argentina", "Perú", "Colombia", "México", "Venezuela"];
-    const banderas = ["imgs/argentina.png", "imgs/peru.png", "imgs/colombia.jpg", "imgs/mexico.png", "imgs/venezuela.png"]
+    const banderas = ["imgs/argentina.png", "imgs/peru.png", "imgs/colombia.png", "imgs/mexico.png", "imgs/venezuela.png"]
     
     async function verificarDatos(datos) {
         const nacionalidadValue = parseInt(datos.get("nacionalidad"));
