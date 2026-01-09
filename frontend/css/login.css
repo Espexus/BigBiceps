@@ -69,3 +69,23 @@ select {
 }
 
 /* parte responsive */
+@media (max-width: 780px) {
+    .formulario {
+        width: 80%;
+    }
+    .enlace-cuentas {
+        font-size: 1.1em;
+    }   
+}
+@media (max-width: 520px) {
+    html {
+        font-size: 14px;
+    }
+    .formulario {
+        width: 70%;
+        padding: 4%;
+    }
+    input[type ="text"], input[type="password"], .campo-input {
+        margin-bottom: 6%;
+    }
+}
