@@ -80,3 +80,21 @@ select {
 input:hover, select:hover {
     color: red;
 }
+
+@media (max-width:580px) {
+    html {
+        font-size: 14px;
+    }
+    .imagen-perfil {
+        width: 34%;
+    }
+    .boton-discreto {
+        padding: 2%;
+    }
+    .item-informacion {
+        padding: 6% 1%;
+    }
+    select {
+        width: 40%;
+    }
+}

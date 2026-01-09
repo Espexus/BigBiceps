@@ -20,7 +20,6 @@ header {
 /* menu */
 .menu-superior {
     background-color: rgba(66, 66, 66, 0.480);
-    height: 10vh;
 }
 .lista-menu {
     display: flex;
@@ -143,4 +142,80 @@ footer {
 .enlace-menu2:hover {
     color: rgb(255, 0, 0);
     text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 1180px) {
+    .item-menu {
+        width: 22%;
+    }
+    .enlace-menu {
+        font-size: 1.1em;
+        padding: 10% 0;
+    }
+    .item-menu2 {
+        width: 30%;
+    }
+}
+@media (max-width: 780px) {
+    html {
+        font-size: 14px;
+    }
+    .item-menu {
+        width: 22%;
+    }
+    .enlace-menu {
+        font-size: 1.1em;
+        padding: 10% 2%;
+    }
+    .descripcion {
+        font-size: 1.6em;
+    }
+    .item-menu2 {
+        width: 30%;
+    }
+}
+@media (max-width: 520px) {
+    html {
+        font-size: 14px;
+    }
+    header {
+        height: 60vh;
+    }
+    .lista-menu {
+        display: flex;
+        gap: 2%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .item-menu {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .enlace-menu {
+        font-size: 1em;
+        padding: 10% 0;
+    }
+    .descripcion {
+        font-size: 1.2em;
+    }
+    .titulo {
+        height: 50vh;
+    }
+    h1 {
+        font-size: 6em;
+    }
+    section {
+    margin: 2% 0;
+    margin-left: 2%;
+    margin-bottom: 8%;
+    }
+    p {
+        margin-bottom: 4%;
+    }
+    .item-menu2 {
+        width: 30%;
+    }
 }
